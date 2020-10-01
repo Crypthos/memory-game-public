@@ -1,0 +1,21 @@
+.navbar {
+  background-color: darkblue;
+  height: 170px;
+}
+.col1 {
+  color: #caf3ed;
+  font-family: "Arial Rounded MT Bold", serif;
+  font-size: 36px;
+  height: 70px;
+  background-color: darkblue;
+
+}
+.col2 {
+  color:  #caf3ed;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 18px;
+  font-family: "Calibri", serif;
+  height: 50px;
+  background-color: darkblue;
+
+}
