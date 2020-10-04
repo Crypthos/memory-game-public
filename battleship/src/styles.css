@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Milkshake;
+  src: url(assets/fonts/Milkshake/Milkshake.ttf) format("truetype");
+}
+
+.Milkshake{
+  font-family: Milkshake, serif, Arial;
+}

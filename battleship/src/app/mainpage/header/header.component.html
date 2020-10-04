@@ -1,14 +1,14 @@
 <nav class="navbar navbar-light">
   <img src=".\assets\images\battleship.jpg" alt="battle1" width="150" height="150" class="d-inline-block align-top">
   <div class="col1 col-md-8">
-    <div class="text-center"><h1>{{title.name}}</h1>
+    <div class="text-center"><h1 class="Milkshake">{{title.name}}</h1>
     </div>
     <div class="row">
       <div class="col2 col-md-6 ">
-        Today is {{date}}
+        Today&nbsp;&nbsp;is&nbsp;&nbsp;{{date | date: 'dd-MM-yyyy'}}
       </div>
       <div class="col2 col-md-6 text-right">
-        The home of games.
+        You&nbsp;arrived&nbsp;at&nbsp;HQ
       </div>
     </div>
   </div>

@@ -13,9 +13,13 @@
 .col2 {
   color:  #caf3ed;
   border-bottom: 1px solid #e7e7e7;
-  font-size: 18px;
-  font-family: "Calibri", serif;
+  font-size: 22px;
+  font-family: Milkshake,"Calibri", serif;
   height: 50px;
   background-color: darkblue;
 
+}
+
+h1{
+  font-size: 48px;
 }
