@@ -11,6 +11,7 @@ import { NavbarComponent } from './mainpage/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { GameboardComponent } from './components/gameboard/gameboard.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GameboardComponent } from './components/gameboard/gameboard.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
