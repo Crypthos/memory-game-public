@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './mainpage/homepage/homepage.component';
+import { HomeComponent } from './mainpage/home/home.component';
 import { HeaderComponent } from './mainpage/header/header.component';
 import { NavbarComponent } from './mainpage/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
@@ -16,7 +16,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    HomeComponent,
     HeaderComponent,
     NavbarComponent,
     LoginComponent,

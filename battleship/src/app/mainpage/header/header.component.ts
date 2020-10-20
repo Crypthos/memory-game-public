@@ -11,7 +11,8 @@ export class HeaderComponent implements OnInit {
   @Input() title: {name: string};
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
   }
 
 }

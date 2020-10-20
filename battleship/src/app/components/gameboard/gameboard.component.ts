@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {GameBlock} from "../models/gameblock";
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {Component,  OnInit} from '@angular/core';
+import { GameBlock } from '../models/gameblock.model';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-gameboard',
@@ -9,27 +10,32 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class GameboardComponent implements OnInit {
 
+  // private waterXCrd: number[] = [2, 3, 6, 7];
+  // private waterYCrd: number[] = [4 , 5];
   gameBlocks: GameBlock[] = [];
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.createGameBoard();
   }
 
   public getNumberOfGameBlocks() {
     return this.gameBlocks.length;
   }
 
-  drop(event: CdkDragDrop<any>) {
-    if (event.container.id === event.previousContainer.id) {
+ /* public getNumberOfNoWaterGameBlocks() {
+    return this.gameBlocks
+      .filter(gb => gb.noWater)
+      .length;
+  }*/
 
-      moveItemInArray(this.gameBlocks, event.previousIndex, event.currentIndex);
-    } else {
-
-    }
+ /* public getNumberOfWaterGameBlocks() {
+    return this.gameBlocks
+      .filter(gb => !gb.noWater)
+      .length;
   }
-
+*/
   private createGameBoard() {
     for (let x = 0; x < 10; x++) {
       for (let y = 0; y < 10; y++) {
@@ -39,8 +45,18 @@ export class GameboardComponent implements OnInit {
   }
 
   private createGameBlock(x: number, y: number) {
-    return new GameBlock(x, y);
+   /* if (this.waterYCrd.includes(x) && this.waterXCrd.includes(y)) {
+      return new GameBlock(x, y, false);
+    } else {*/
+      return new GameBlock(x, y, true);
+    }
+  //}
+  drop(event: CdkDragDrop<any>) {
+    if (event.container.id === event.previousContainer.id) {
+      // move inside same list
+      moveItemInArray(this.gameBlocks, event.previousIndex, event.currentIndex);
+    } else {
+      // move between lists
+    }
   }
-
-
 }

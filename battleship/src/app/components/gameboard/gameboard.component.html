@@ -1,17 +1,21 @@
-<div class="container-fluid">
+<div class="container-fluid ">
   <div class="row justify-content-center">
-    <div class="gameboard">
-      <div (cdkDropListDropped)="drop($event)"
-           [cdkDropListData]="gameBlocks"
-           cdkDropList
-           cdkDropListConnectedTo="itemsList"
-           class="gameblocks">
-        <div *ngFor="let gameBlock of gameBlocks" [class]="gameBlock">
-
+    <div class="gameBoard">
+      <div
+        cdkDropList
+        id="blocksList"
+        [cdkDropListData]="gameBlocks"
+        cdkDropListConnectedTo="itemsList"
+        (cdkDropListDropped)="drop($event)"
+        class="gameBlocks">
+        <div *ngFor="let gameBlock of gameBlocks" [class]="gameBlock.noWater ? 'gameBlock' : 'gameBlock water'">
+          <!--          <p class="card-text">{{gameBlock.toString()}}</p>-->
         </div>
       </div>
     </div>
   </div>
+
 </div>
+
 
 <p>Under Consctruction!!!</p>

@@ -8,6 +8,10 @@ import {Component, Input} from '@angular/core';
 export class AppComponent {
 
    title= [{name: 'Battleship'}];
+  loadedFeature = 'home';
 
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 
 }

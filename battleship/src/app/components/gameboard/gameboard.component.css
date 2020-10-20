@@ -1,20 +1,32 @@
 .container-fluid {
-  background-color: deepskyblue;
+  background-color: #39d9f6;
 }
 
-.gameboard {
-  border: 0.5em solid dodgerblue;
-  background: #1c7430;
-  width: 61rem;
+.gameBoard {
+  border: 0.5em solid #2387a0;
+  background: dodgerblue;
+  width: 21rem;
 }
 
-.gameblocks {
-  flex: 1 0 6rem;
+.gameBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20rem;
+  height: 20rem;
+}
+
+.gameBlock {
+  flex: 1 0 2rem;
   box-sizing: border-box;
   padding: 10px;
-  width: 6rem;
-  height: 6rem;
+  width: 2rem;
+  height: 2rem;
   margin: 0;
   border: 1px solid black;
 }
+
+.water {
+  background: dodgerblue;
+}
+
 
