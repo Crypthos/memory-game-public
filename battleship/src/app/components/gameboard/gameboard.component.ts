@@ -10,8 +10,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 })
 export class GameboardComponent implements OnInit {
 
-  // private waterXCrd: number[] = [2, 3, 6, 7];
-  // private waterYCrd: number[] = [4 , 5];
+
   gameBlocks: GameBlock[] = [];
 
   constructor() {}
@@ -24,18 +23,6 @@ export class GameboardComponent implements OnInit {
     return this.gameBlocks.length;
   }
 
- /* public getNumberOfNoWaterGameBlocks() {
-    return this.gameBlocks
-      .filter(gb => gb.noWater)
-      .length;
-  }*/
-
- /* public getNumberOfWaterGameBlocks() {
-    return this.gameBlocks
-      .filter(gb => !gb.noWater)
-      .length;
-  }
-*/
   private createGameBoard() {
     for (let x = 0; x < 10; x++) {
       for (let y = 0; y < 10; y++) {
@@ -45,9 +32,7 @@ export class GameboardComponent implements OnInit {
   }
 
   private createGameBlock(x: number, y: number) {
-   /* if (this.waterYCrd.includes(x) && this.waterXCrd.includes(y)) {
-      return new GameBlock(x, y, false);
-    } else {*/
+
       return new GameBlock(x, y, true);
     }
   //}
