@@ -23,3 +23,7 @@
 h1{
   font-size: 48px;
 }
+
+.navbar-icon{
+  border-radius: 1em;
+}
