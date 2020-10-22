@@ -25,16 +25,12 @@ M
 battleship/tsconfig.spec.json,0\e\0e723140aca6b2622b2be89d3aaf89911c3d807e
 F
 battleship/tslint.json,5\9\597b0e79f0ef571b798b72e9c55ab8768ed61e56
-k
-;battleship/src/app/mainpage/homepage/homepage.component.css,5\5\559946a2a2e102fc14229a754a59ed80d313964d
 T
 $battleship/src/app/app.component.css,9\2\92ae632a301050259724f3c8a1d0af85adf9ed9e
 g
 7battleship/src/app/mainpage/header/header.component.css,6\e\6e6135f6487b6cbfb3415038b741222a798fc382
 h
 8battleship/src/app/mainpage/header/header.component.html,1\2\124eb00f499fcb3246e626d06c2c3bfa34a2e3e6
-l
-<battleship/src/app/mainpage/homepage/homepage.component.html,1\c\1c429230ff6f8ff71bed8a63ed094cf7a8584b74
 G
 battleship/package.json,1\3\13d8fb059e0485eb46d7687a30f5250efb7e46bb
 L
@@ -59,3 +55,7 @@ g
 7battleship/src/app/mainpage/navbar/navbar.component.css,3\0\30eae31bd1545d7bf620a57242a0c66eb550f0b3
 U
 %battleship/src/app/app.component.html,2\0\2033a7d180e0f33041f2b976b840f026ed43f983
+f
+6battleship/src/app/mainpage/header/header.component.ts,f\e\fea38963f1a5d8e1a910f419fbdd1a3a128265a2
+n
+>battleship/src/app/components/gameboard/gameboard.component.ts,a\c\ac840e9307d2d5cb320e8a7f2736dc7193147b4e
