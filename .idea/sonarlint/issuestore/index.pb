@@ -59,3 +59,17 @@ U
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 l
 <battleship/src/app/components/register/register.component.ts,e\5\e5429d9dbd281babd91cc92353d6789aa9e740dd
+T
+$.idea/codeStyles/codeStyleConfig.xml,d\d\dd7b3350c29c49497756c7f32c69a3bed18b1cba
+L
+.idea/codeStyles/Project.xml,6\e\6ecd6000a7b6f4a2884412ff19f74193ed089648
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+P
+ battleship/src/app/app.module.ts,1\1\11b765a9b5ce92e70a56483149d9f72bb1c5236e
+f
+6battleship/src/app/components/login/login.component.ts,9\8\9839a56243f1c9fc4f11ca332e61361f7dcc338a
+n
+>battleship/src/app/components/gameboard/gameboard.component.ts,a\c\ac840e9307d2d5cb320e8a7f2736dc7193147b4e
+X
+(battleship/src/app/app-routing.module.ts,e\1\e17fe7aea7c7c4cb249cc36c846b5a582ca45844

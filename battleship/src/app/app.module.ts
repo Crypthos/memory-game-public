@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { GameboardComponent } from './components/gameboard/gameboard.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
         HttpClientModule,
         RouterModule,
         DragDropModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AppRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]
