@@ -34,7 +34,7 @@
 
     <div class="form-group">
       <label>password</label>
-      <input
+      <input [class.is-invalid]="registrationForm.errors?.misMatch"
              formControlName="password"
              type="password"
              class="form-control"
