@@ -1,0 +1,13 @@
+.info-page-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;}
+
+  .intro-card {
+    border-radius: 3px;
+    width: 200px;
+    height: 100px;
+  }
+

@@ -14,12 +14,14 @@ import { GameboardComponent } from './components/gameboard/gameboard.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from "./components/about/about.component";
+import { IntroComponent } from "./components/intro/intro.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
+    IntroComponent,
     HeaderComponent,
     NavbarComponent,
     LoginComponent,
