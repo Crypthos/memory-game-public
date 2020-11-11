@@ -13,11 +13,13 @@ import { RegisterComponent } from './components/register/register.component';
 import { GameboardComponent } from './components/gameboard/gameboard.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from "./components/about/about.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
     HeaderComponent,
     NavbarComponent,
     LoginComponent,

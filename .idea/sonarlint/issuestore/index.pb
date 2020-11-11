@@ -73,3 +73,9 @@ n
 >battleship/src/app/components/gameboard/gameboard.component.ts,a\c\ac840e9307d2d5cb320e8a7f2736dc7193147b4e
 X
 (battleship/src/app/app-routing.module.ts,e\1\e17fe7aea7c7c4cb249cc36c846b5a582ca45844
+f
+6battleship/src/app/mainpage/header/header.component.ts,f\e\fea38963f1a5d8e1a910f419fbdd1a3a128265a2
+b
+2battleship/src/app/mainpage/home/home.component.ts,4\8\48da69de1f5628d2321c0e28a45e894bf0cfd784
+S
+#battleship/src/app/app.component.ts,7\d\7d346f8653054ffecd4b4513487d08ec05626c71
