@@ -35,10 +35,6 @@ G
 battleship/package.json,1\3\13d8fb059e0485eb46d7687a30f5250efb7e46bb
 L
 battleship/package-lock.json,e\5\e5d788290380f1509a49d6c5766df4dea17f9d9a
-o
-?battleship/src/app/components/gameboard/gameboard.component.css,1\2\12c4c0fbe1092512cc29372041938210a143c5ba
-p
-@battleship/src/app/components/gameboard/gameboard.component.html,d\6\d606ebc11b16e7a6d3e25c82bacce1021a1bc9bd
 g
 7battleship/src/app/components/login/login.component.css,1\7\17e7fe83f9153f3d4c6824784a160e01891f7e39
 h
@@ -69,8 +65,6 @@ P
  battleship/src/app/app.module.ts,1\1\11b765a9b5ce92e70a56483149d9f72bb1c5236e
 f
 6battleship/src/app/components/login/login.component.ts,9\8\9839a56243f1c9fc4f11ca332e61361f7dcc338a
-n
->battleship/src/app/components/gameboard/gameboard.component.ts,a\c\ac840e9307d2d5cb320e8a7f2736dc7193147b4e
 X
 (battleship/src/app/app-routing.module.ts,e\1\e17fe7aea7c7c4cb249cc36c846b5a582ca45844
 f

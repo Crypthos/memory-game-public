@@ -2,10 +2,12 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './components/login/login.component'
 import {RegisterComponent} from './components/register/register.component'
-import {GameboardComponent} from './components/gameboard/gameboard.component'
+
 import {HomeComponent} from "./mainpage/home/home.component";
 import {AboutComponent} from "./components/about/about.component";
 import {IntroComponent} from "./components/intro/intro.component";
+import {GameCardComponent} from "./components/game-card/game-card.component";
+import {GameComponent} from "./components/game/game.component";
 
 
 const routes: Routes = [
@@ -13,7 +15,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'about', component:AboutComponent},
   {path: 'intro', component: IntroComponent},
-  {path: 'game', component: GameboardComponent},
+  {path: 'game', component: GameComponent},
   {path: 'login', component: LoginComponent,
      children: [{path: 'register', component: RegisterComponent}]},
   {path: 'register', component: RegisterComponent}

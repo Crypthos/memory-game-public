@@ -10,11 +10,17 @@ import { HeaderComponent } from './mainpage/header/header.component';
 import { NavbarComponent } from './mainpage/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { GameboardComponent } from './components/gameboard/gameboard.component';
+
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from "./components/about/about.component";
 import { IntroComponent } from "./components/intro/intro.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { GameComponent } from './components/game/game.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { ResetGameComponent } from './components/reset-game/reset-game.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -26,18 +32,24 @@ import { IntroComponent } from "./components/intro/intro.component";
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    GameboardComponent,
+    GameCardComponent,
+    GameComponent,
+    ResetGameComponent,
+
 
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpClientModule,
-        RouterModule,
-        DragDropModule,
-        ReactiveFormsModule,
-        AppRoutingModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
+    DragDropModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatDialogModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

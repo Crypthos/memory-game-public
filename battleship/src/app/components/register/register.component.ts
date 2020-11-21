@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {forbiddenNameValidator} from "../shared/user-name.validator";
-import {PasswordValidator} from "../shared/password.validator";
+import {forbiddenNameValidator} from "../validators/user-name.validator";
+import {PasswordValidator} from "../validators/password.validator";
 import { RegistrationService} from "../../registration.service";
 
 @Component({
