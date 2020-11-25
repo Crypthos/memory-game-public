@@ -1,12 +1,12 @@
 .navbar {
   background-color: darkblue;
-  height: 170px;
+  height: 100%;
 }
 .col1 {
   color: #caf3ed;
   font-family: "Arial Rounded MT Bold", serif;
   font-size: 36px;
-  height: 70px;
+  height: 70%;
   background-color: darkblue;
 
 }
@@ -15,7 +15,7 @@
   border-bottom: 1px solid #e7e7e7;
   font-size: 22px;
   font-family: Milkshake,"Calibri", serif;
-  height: 50px;
+  height: 50%;
   background-color: darkblue;
 
 }
@@ -27,3 +27,9 @@ h1{
 .navbar-icon{
   border-radius: 1em;
 }
+
+#leftImage{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+

@@ -16,7 +16,6 @@ export class GameComponent implements OnInit {
     '299331381.jpeg',
     '313088237.jpeg',
     '376006721.jpeg'
-
   ];
 
   cards: CardData[] = [];
