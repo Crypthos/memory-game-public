@@ -5,8 +5,8 @@ import {ResetGameComponent} from "../reset-game/reset-game.component";
 
 @Component({
   selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  templateUrl: './memory/src/app/game/game.component.html',
+  styleUrls: ['./memory/src/app/game/game.component.css']
 })
 export class GameComponent implements OnInit {
   cardImages = [
