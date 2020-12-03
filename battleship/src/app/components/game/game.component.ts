@@ -12,18 +12,21 @@ export class GameComponent implements OnInit {
   cardImages = [
     '66821761.jpeg',
     '225598580.jpeg',
-    '282880805.jpeg',
-    '299331381.jpeg',
-    '313088237.jpeg',
-    '376006721.jpeg'
-
+    // '282880805.jpeg',
+    // '299331381.jpeg',
+    // '313088237.jpeg',
+    // '376006721.jpeg'
   ];
 
   cards: CardData[] = [];
 
+  score: number = 0;
+
+  interval;
   flippedCards: CardData[] = [];
 
   matchedCount = 0;
+  gameStarted = false;
 
   shuffleArray(anArray: any[]): any[] {
     return anArray.map(a => [Math.random(), a])
@@ -47,8 +50,8 @@ export class GameComponent implements OnInit {
         state: 'default'
       };
 
-      this.cards.push({ ...cardData });
-      this.cards.push({ ...cardData });
+      this.cards.push({...cardData});
+      this.cards.push({...cardData});
 
     });
 
@@ -56,8 +59,12 @@ export class GameComponent implements OnInit {
   }
 
   cardClicked(index: number): void {
+
     const cardInfo = this.cards[index];
 
+
+    this.startTimers()
+    this.gameStarted = true;
 
     if (cardInfo.state === 'default' && this.flippedCards.length < 2) {
       cardInfo.state = 'flipped';
@@ -66,8 +73,6 @@ export class GameComponent implements OnInit {
       if (this.flippedCards.length > 1) {
         this.checkForCardMatch();
       }
-
-
     } else if (cardInfo.state === 'flipped') {
       cardInfo.state = 'default';
       this.flippedCards.pop();
@@ -88,12 +93,15 @@ export class GameComponent implements OnInit {
         this.matchedCount++;
 
         if (this.matchedCount === this.cardImages.length) {
+          this.pauseTimer()
+          this.gameStarted = false
           const dialogRef = this.dialog.open(ResetGameComponent, {
             disableClose: true
           });
 
           dialogRef.afterClosed().subscribe(() => {
             this.restart();
+            this.score = 0;
           });
         }
       }
@@ -101,9 +109,32 @@ export class GameComponent implements OnInit {
     }, 1000);
   }
 
+  startTimers(): void {
+    if (this.gameStarted == false) {
+      console.log("=====>");
+      this.interval = setInterval(() => {
+        if (this.score === 0) {
+          this.score++;
+        } else {
+          this.score++;
+        }
+      }, 100);
+
+    }
+  }
+
   restart(): void {
     this.matchedCount = 0;
     this.setupCards();
   }
 
+  pauseTimer() {
+    clearInterval(this.interval);
+  }
+
+  //
+  // transform(value: number, args?: any): number {
+  //   return value;
+  // }
 }
+

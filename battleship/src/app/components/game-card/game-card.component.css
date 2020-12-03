@@ -1,4 +1,4 @@
-:host {
+host {
   display: block;
   perspective: 600px;
 }
@@ -10,7 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 100px;
+  width: 100px;
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;

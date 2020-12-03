@@ -7,7 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class AppComponent {
 
-   title= [{name: 'Battleship'}];
+   title= [{name: 'Memory'}];
   loadedFeature = 'home';
 
   onNavigate(feature: string) {
