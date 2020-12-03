@@ -1,6 +1,6 @@
 <div class="card" (click)="cardClicked.emit()" [@cardFlip]="data.state">
   <div class="face back">
-    <img src="assets/cards/card-back/card-back.jpg">
+    <img src="../../../assets/cards/card-back/card-back.jpg">
   </div>
   <div class="face front">
     <img [src]="'/assets/cards/card-front/' + data.imageId ">
