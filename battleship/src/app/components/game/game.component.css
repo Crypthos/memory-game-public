@@ -3,7 +3,16 @@
   grid-template-columns: repeat(5, 150px);
   gap: 16px;
   justify-content: center;
+
 }
+.col-md-12{
+  background: url("src/assets/images/Tafelblad-Sesam-Hout-1.jpg");
+  background-size: 300px 400px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 150px);

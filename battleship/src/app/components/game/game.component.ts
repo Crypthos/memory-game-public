@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
   cardImages = [
     '66821761.jpeg',
     '225598580.jpeg',
-    // '282880805.jpeg',
+    '282880805.jpeg',
     // '299331381.jpeg',
     // '313088237.jpeg',
     // '376006721.jpeg'
@@ -88,6 +88,7 @@ export class GameComponent implements OnInit {
       cardOne.state = cardTwo.state = nextState;
 
       this.flippedCards = [];
+
 
       if (nextState === 'matched') {
         this.matchedCount++;
