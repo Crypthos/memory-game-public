@@ -8,7 +8,7 @@
           will
           remove
           those cards!</p>
-        <p class="text-center">your score is: {{score}}</p>
+        <p class="text-center">your time is: {{score}}</p>
         <div class="col-md-12">
         <div class="grid p-16">
           <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">

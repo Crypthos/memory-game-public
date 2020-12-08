@@ -13,9 +13,9 @@ export class GameComponent implements OnInit {
     '66821761.jpeg',
     '225598580.jpeg',
     '282880805.jpeg',
-    // '299331381.jpeg',
-    // '313088237.jpeg',
-    // '376006721.jpeg'
+    '299331381.jpeg',
+    '313088237.jpeg',
+    '376006721.jpeg'
   ];
 
   cards: CardData[] = [];
@@ -73,11 +73,12 @@ export class GameComponent implements OnInit {
       if (this.flippedCards.length > 1) {
         this.checkForCardMatch();
       }
-    } else if (cardInfo.state === 'flipped') {
-      cardInfo.state = 'default';
-      this.flippedCards.pop();
-
     }
+    // else if (cardInfo.state === 'flipped') {
+    //   cardInfo.state = 'default';
+    //   this.flippedCards.pop();
+    //
+    // }
   }
 
   checkForCardMatch(): void {
