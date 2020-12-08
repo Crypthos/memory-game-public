@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CardData} from "../game-card/cardData";
 import {MatDialog} from "@angular/material/dialog";
 import {ResetGameComponent} from "../reset-game/reset-game.component";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-game',
@@ -33,13 +34,17 @@ export class GameComponent implements OnInit {
       .sort((a, b) => a[0] - b[0])
       .map(a => a[1]);
   }
-
-  constructor(private dialog: MatDialog) {
+  name = ''
+  //ActivatedRouter
+  constructor(private dialog: MatDialog,
+              private route: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
     this.setupCards();
+    /*console.log(this.route.snapshot.params['name'])*/
+    this.name = (this.route.snapshot.params['name']);
   }
 
   setupCards(): void {

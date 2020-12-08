@@ -21,6 +21,8 @@ import { GameComponent } from './components/game/game.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { ResetGameComponent } from './components/reset-game/reset-game.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ErrorComponent } from './components/error/error.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     GameCardComponent,
     GameComponent,
     ResetGameComponent,
+    ErrorComponent,
+    ChatComponent,
 
 
   ],

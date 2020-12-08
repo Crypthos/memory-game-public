@@ -8,23 +8,32 @@ import {AboutComponent} from "./components/about/about.component";
 import {IntroComponent} from "./components/intro/intro.component";
 import {GameCardComponent} from "./components/game-card/game-card.component";
 import {GameComponent} from "./components/game/game.component";
+import {ErrorComponent} from "./components/error/error.component";
+import {ChatComponent} from "./components/chat/chat.component";
+
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component:HomeComponent},
+  // {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', component: HomeComponent},
+  {path: 'welcome', component:HomeComponent},
   {path: 'about', component:AboutComponent},
   {path: 'intro', component: IntroComponent},
+  {path: 'chat', component: ChatComponent},
   {path: 'game', component: GameComponent},
-  {path: 'login', component: LoginComponent,
-     children: [{path: 'register', component: RegisterComponent}]},
-  {path: 'register', component: RegisterComponent}
+  {path: 'game/:name', component: GameComponent},
+  {path: 'login', component: LoginComponent},
+ /* ,
+     children: [{path: 'register', component: RegisterComponent}]},*/
+  // {path: 'register', component: RegisterComponent},
+  {path: '**', component: ErrorComponent}
 ];
 
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes, { useHash: true, relativeLinkResolution: 'legacy' })],
+  // imports: [RouterModule.forRoot(routes, { useHash: true, relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
