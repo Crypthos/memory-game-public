@@ -1,6 +1,7 @@
-<small *ngIf="invalidLogin">{{errorMessage}}</small>
+
 
 <div class="col-md-6 offset-md-3 mt-4">
+  <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
   <h3>Login</h3>
   <form #f="ngForm"
         >
@@ -8,6 +9,7 @@
       <label for="loginUsername">Username</label>
       <input type="text"
              name="username"
+             id="loginUsername"
              placeholder="Enter username"
              [(ngModel)] = "username"
              class="form-control">
@@ -22,6 +24,7 @@
       <label for="loginPassword">Password</label>
       <input type="password"
              name="password"
+             id="loginPassword"
              placeholder="Enter Password"
              [(ngModel)]="password"
              class="form-control">
