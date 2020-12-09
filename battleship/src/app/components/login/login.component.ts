@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
   //Router
   //Angular.giveMeRouter
   //Dependency Injection
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
   }
@@ -24,9 +25,9 @@ export class LoginComponent implements OnInit {
   handleLogIn() {
     /*console.log(this.username);
     console.log(this.password);*/
-    if (this.username==='team08' && this.password==='dummy') {
+    if (this.username === 'team08' && this.password === 'dummy') {
       // Redirect to game page
-      this.router.navigate(['game',this.username])
+      this.router.navigate(['game', this.username])
       this.invalidLogin = false
     } else {
       this.invalidLogin = true
@@ -34,6 +35,9 @@ export class LoginComponent implements OnInit {
   }
 
   handleSignIn() {
-    console.log(this.username);
-  }
+    /*console.log(this.username);*/
+          // Redirect to register page
+     this.router.navigate(['register'])
+    }
+
 }

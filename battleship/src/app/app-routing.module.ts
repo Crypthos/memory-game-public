@@ -23,6 +23,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'game/:name', component: GameComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
  /* ,
      children: [{path: 'register', component: RegisterComponent}]},*/
   // {path: 'register', component: RegisterComponent},
