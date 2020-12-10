@@ -14,7 +14,8 @@ export class ChatFormComponent implements OnInit {
   public message: string;
   public username: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
 
@@ -34,7 +35,13 @@ export class ChatFormComponent implements OnInit {
       }
     });
   }
-
+  EnterKeyPress(): any {
+    function enterKeyPressed(event) {
+      if (event.key == 13) {
+                return this.message;
+      }
+    }
+  }
   SendMessage(): any {
     this.socket.emit('message', this.message);
     const element = document.createElement('li');
@@ -45,5 +52,8 @@ export class ChatFormComponent implements OnInit {
     element.style.textAlign = 'right';
     document.getElementById('message-list').appendChild(element);
     this.message = '';
+    // this.EnterKeyPress();
   }
+
+
 }
