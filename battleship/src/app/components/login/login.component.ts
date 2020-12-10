@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import {HcAuthenticationService} from "../../service/hc-authentication.service";
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   //Router
   //Angular.giveMeRouter
   //Dependency Injection
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private hcAuthenticatinServices: HcAuthenticationService) {
   }
 
   ngOnInit(): void {
@@ -25,7 +27,8 @@ export class LoginComponent implements OnInit {
   handleLogIn() {
     /*console.log(this.username);
     console.log(this.password);*/
-    if (this.username === 'team08' && this.password === 'dummy') {
+    // if (this.username === 'team08' && this.password === 'dummy') {
+    if (this.hcAuthenticatinServices.authenticate(this.username, this.password)) {
       // Redirect to game page
       this.router.navigate(['game', this.username])
       this.invalidLogin = false

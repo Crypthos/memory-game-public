@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {HcAuthenticationService} from "../../service/hc-authentication.service";
 
 
 @Component({
@@ -7,14 +8,17 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @Output() featureSelected = new EventEmitter<string> ();
+  //isUserLoggedIn: boolean = false;
+ /* @Output() featureSelected = new EventEmitter<string> ();*/
+  //hcAuthenticationService: any;
 
-  onSelect(feature: string) {
+ /* onSelect(feature: string) {
     this.featureSelected.emit(feature);
-  }
-  constructor() { }
+  }*/
+  constructor(public hcAuthenticationService: HcAuthenticationService) { }
 
   ngOnInit(): void {
+    //this.isUserLoggedIn = this.hcAuthenticationService.isUserLoggedIn();
   }
 
 }

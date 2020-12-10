@@ -3,14 +3,15 @@
     <div><a routerLink="/welcome" class="nav-link">Welcome</a></div>
 
     <ul class="navbar-nav">
-      <li><a routerLink="/game" class="nav-link">Game</a></li>
-      <li><a routerLink="/chat" class="nav-link">Chat</a></li>
+      <li><a *ngIf="hcAuthenticationService.isUserLoggedIn()" routerLink="/game" class="nav-link">Game</a></li>
+      <li><a *ngIf="hcAuthenticationService.isUserLoggedIn()" routerLink="/chat" class="nav-link">Chat</a></li>
     </ul>
 
   <ul class="navbar-nav navbar-collapse justify-content-end">
-    <li><a routerLink="/register" class="nav-link">Register</a></li>
-    <li><a routerLink="/login" class="nav-link">Login</a></li>
-  <!--  <li><a href="/logout" class="nav-link">Log Out</a></li>-->
+    <li><a *ngIf="!hcAuthenticationService.isUserLoggedIn()" routerLink="/register" class="nav-link">Register</a></li>
+    <li><a *ngIf="!hcAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+    <li><a *ngIf="hcAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
   </ul>
+
  </nav>
 </header>

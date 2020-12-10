@@ -10,6 +10,7 @@ import {GameCardComponent} from "./components/game-card/game-card.component";
 import {GameComponent} from "./components/game/game.component";
 import {ErrorComponent} from "./components/error/error.component";
 import {ChatComponent} from "./components/chat/chat.component";
+import {LogoutComponent} from "./components/logout/logout.component";
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'game/:name', component: GameComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'logout', component: LogoutComponent},
   {path: 'register', component: RegisterComponent},
  /* ,
      children: [{path: 'register', component: RegisterComponent}]},*/
