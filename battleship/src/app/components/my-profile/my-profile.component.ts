@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileDataService} from "../../service/data/profile-data.service";
+import {Router} from "@angular/router";
 
 export class Profile {
   constructor(
@@ -16,7 +17,9 @@ export class Profile {
 })
 export class MyProfileComponent implements OnInit {
 
+
   profiles: Profile[];
+  message: String;
   /*profiles = [
     new Profile(1,'Name : ', 'Team08'),
     new Profile(2,'Email : ', 'team08@hva.nl'),
@@ -24,16 +27,37 @@ export class MyProfileComponent implements OnInit {
   ]
 */
   constructor(
-    private profileService: ProfileDataService
+    private profileService: ProfileDataService,
+    private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.refreshProfiles();
+  }
+
+  refreshProfiles(){
     this.profileService.retrieveAllProfiles('team08').subscribe(
       response => {
         console.log(response);
-                this.profiles = response;
+        this.profiles = response;
       }
-    )
+    );
   }
 
+
+  deleteProfile(id) {
+    console.log(`delete profile ${id}`);
+    this.profileService.deleteProfile('team08', id).subscribe(
+      response => {
+        console.log(response);
+        this.message = `Delete of Profile ${id} Succesful!`;
+        this.refreshProfiles();
+      }
+    );
+  }
+
+  updateProfile(id) {
+    console.log(`update ${id}`);
+    this.router.navigate(['myprofile', id]);
+  }
 }

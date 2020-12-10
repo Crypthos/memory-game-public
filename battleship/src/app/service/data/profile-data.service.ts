@@ -12,9 +12,18 @@ export class ProfileDataService {
     private http: HttpClient
   ) { }
 
-
   retrieveAllProfiles(username) {
     return this.http.get<Profile[]>(`http://localhost:8080/users/${username}/profile`);
     //console.log("Excecute Hello Gamer Bean Service")
+  }
+
+  deleteProfile(username, id) {
+    return this.http.delete(`http://localhost:8080/users/${username}/todos/${id}`);
+  }
+
+  updateProfile(username, id, profile) {
+    return this.http.put(
+      `http://localhost:8080/users/${username}/todos/${id}`
+      , profile);
   }
 }

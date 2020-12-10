@@ -20,4 +20,27 @@ public class ProfileHCService {
     public List<Profile> findAll() {
         return profiles;
     }
+
+    public Profile deleteById(long id) {
+        Profile profile = findById(id);
+
+        if (profile == null) return null;
+
+        if (profiles.remove(profile)) {
+            return profile;
+        }
+        return null;
+    }
+
+
+    public Profile findById(long id) {
+        for(Profile profile:profiles){
+            if(profile.getId() == id){
+                return profile;
+            }
+        }
+        return null;
+    }
+
+
 }

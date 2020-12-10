@@ -25,6 +25,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
     ChatComponent,
     LogoutComponent,
     MyProfileComponent,
+    ProfileComponent,
 
 
   ],

@@ -1,6 +1,7 @@
 
 <div class="container">
   <h2> My Profile </h2>
+  <div class="alert alert-success" *ngIf="message">{{message}}</div>
 <table class="table">
 
     <thead>
@@ -15,6 +16,8 @@
 <!--        <td>{{profile.id}}</td>-->
         <td>{{profile.name}}</td>
         <td>{{profile.description}}</td>
+        <td><button (click)="updateProfile(profile.id)" class="btn btn-success">Update</button></td>
+        <td><button (click)="deleteProfile(profile.id)" class="btn btn-warning">Delete</button></td>
       </tr>
     </tbody>
 

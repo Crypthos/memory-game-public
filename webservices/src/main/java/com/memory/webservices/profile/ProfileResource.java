@@ -3,10 +3,8 @@ package com.memory.webservices.profile;
 //package com.memory.webservices.profile.Profile;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,4 +19,16 @@ public class ProfileResource {
     public List<Profile> getAllProfiles(@PathVariable String username) {
         return profileService.findAll();
     }
+
+    // DELETE /users/{username}/profiles/{id}
+    @DeleteMapping("/users/{username}/todos/{id}")
+    public ResponseEntity<Void> deleteTodo(
+            @PathVariable String username, @PathVariable long id) {
+        Profile profile = profileService.deleteById(id);
+        if(profile != null) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
+
 }
