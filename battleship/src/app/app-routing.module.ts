@@ -8,11 +8,13 @@ import {AboutComponent} from "./components/about/about.component";
 import {IntroComponent} from "./components/intro/intro.component";
 import {GameCardComponent} from "./components/game-card/game-card.component";
 import {GameComponent} from "./components/game/game.component";
+import {ChatFormComponent} from "./components/chat-module/chat-form/chat-form.component";
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
+  {path: 'chat', component: ChatFormComponent},
   {path: 'about', component:AboutComponent},
   {path: 'intro', component: IntroComponent},
   {path: 'game', component: GameComponent},
