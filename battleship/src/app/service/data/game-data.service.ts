@@ -18,5 +18,11 @@ export class GameDataService {
     return this.http.get<HelloGamerBean>('http://localhost:8080/hello-gamer-bean');
     //console.log("Excecute Hello Gamer Bean Service")
   }
+//http://localhost:8080/hello-gamer/path-variable/team08
+
+  executeHelloGamerServiceWithPathVariable(name) {
+    return this.http.get<HelloGamerBean>(`http://localhost:8080/hello-gamer/path-variable/${name}`);
+    //console.log("Excecute Hello Gamer Bean Service")
+  }
 
 }

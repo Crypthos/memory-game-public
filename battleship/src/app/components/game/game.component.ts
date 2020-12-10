@@ -143,9 +143,20 @@ export class GameComponent implements OnInit {
   }
 
   getMessage() {
-    console.log(this.service.executeHelloGamerBeanService());
+    //console.log(this.service.executeHelloGamerBeanService());
     this.service.executeHelloGamerBeanService().subscribe(
-      response => this.handleSuccessfulResponse(response)
+      response => this.handleSuccessfulResponse(response),
+      error => this.handleErrorResponse(error)
+    );
+    console.log('last line of getMessage')
+    //console.log("Get message")
+  }
+
+  getMessageWithParameter() {
+    //console.log(this.service.executeHelloGamerBeanService());
+    this.service.executeHelloGamerServiceWithPathVariable(this.name).subscribe(
+      response => this.handleSuccessfulResponse(response),
+      error => this.handleErrorResponse(error)
     );
     console.log('last line of getMessage')
     //console.log("Get message")
@@ -155,6 +166,10 @@ export class GameComponent implements OnInit {
     this.gameMessageFromService = response.message
     //console.log(response);
     //console.log(response.message);
+  }
+
+  handleErrorResponse(error){
+    this.gameMessageFromService = error.error.message
   }
   //
   // transform(value: number, args?: any): number {

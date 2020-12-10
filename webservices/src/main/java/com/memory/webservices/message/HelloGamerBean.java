@@ -1,4 +1,4 @@
-package com.memory.webservices;
+package com.memory.webservices.message;
 
 public class HelloGamerBean {
 

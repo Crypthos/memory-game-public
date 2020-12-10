@@ -1,4 +1,4 @@
-package com.memory.webservices;
+package com.memory.webservices.message;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +20,10 @@ public class HelloGamerController {
 
     //hello-gamer-bean
     @GetMapping(path = "/hello-gamer-bean")
-    public HelloGamerBean helloGameBean(){
-        return new HelloGamerBean("Hello Gamer - again!");
+
+    public HelloGamerBean helloGameBean() {
+        //throw new RuntimeException("Some Error Has Happended.");
+        return new HelloGamerBean("Hello Gamer - Hello again!");
     }
 
     ///hello-gamer/path-variable/team08
