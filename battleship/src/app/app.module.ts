@@ -21,6 +21,7 @@ import { GameComponent } from './components/game/game.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { ResetGameComponent } from './components/reset-game/reset-game.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ChatFormComponent } from './components/chat-module/chat-form/chat-form.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     GameCardComponent,
     GameComponent,
     ResetGameComponent,
+    ChatFormComponent,
 
 
   ],
