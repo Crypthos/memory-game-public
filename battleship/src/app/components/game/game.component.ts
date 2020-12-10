@@ -3,6 +3,7 @@ import {CardData} from "../game-card/cardData";
 import {MatDialog} from "@angular/material/dialog";
 import {ResetGameComponent} from "../reset-game/reset-game.component";
 import {ActivatedRoute} from "@angular/router";
+import {GameDataService} from "../../service/data/game-data.service";
 
 @Component({
   selector: 'app-game',
@@ -19,6 +20,7 @@ export class GameComponent implements OnInit {
     '376006721.jpeg'
   ];
 
+  gameMessageFromService;
   cards: CardData[] = [];
 
   score: number = 0;
@@ -37,7 +39,8 @@ export class GameComponent implements OnInit {
   name = ''
   //ActivatedRouter
   constructor(private dialog: MatDialog,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private service: GameDataService) {
 
   }
 
@@ -139,6 +142,20 @@ export class GameComponent implements OnInit {
     clearInterval(this.interval);
   }
 
+  getMessage() {
+    console.log(this.service.executeHelloGamerBeanService());
+    this.service.executeHelloGamerBeanService().subscribe(
+      response => this.handleSuccessfulResponse(response)
+    );
+    console.log('last line of getMessage')
+    //console.log("Get message")
+  }
+
+  handleSuccessfulResponse(response){
+    this.gameMessageFromService = response.message
+    //console.log(response);
+    //console.log(response.message);
+  }
   //
   // transform(value: number, args?: any): number {
   //   return value;

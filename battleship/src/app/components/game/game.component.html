@@ -5,7 +5,13 @@
     <div class="col-md-10">
       <div class="p-16">
         <H3>Welcome {{name}} to our awesome game!</H3>
-        <p class="text-center">Tap on a card to flip it. You can only flip a maximum of two cards at a time. A match
+        <h6>Click here to get<button (click)="getMessage()" class="btn btn-light">a message</button></h6>
+        <div class="container" *ngIf="gameMessageFromService">
+<!--          <h6>Your Message</h6>-->
+          <h6>{{gameMessageFromService}}</h6>
+        </div>
+
+        <p class="text">Tap on a card to flip it. You can only flip a maximum of two cards at a time. A match
           will
           remove
           those cards!</p>
