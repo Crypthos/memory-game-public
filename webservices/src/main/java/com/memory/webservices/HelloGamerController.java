@@ -21,7 +21,7 @@ public class HelloGamerController {
     //hello-gamer-bean
     @GetMapping(path = "/hello-gamer-bean")
     public HelloGamerBean helloGameBean(){
-        return new HelloGamerBean("Hello Gamer");
+        return new HelloGamerBean("Hello Gamer - again!");
     }
 
     ///hello-gamer/path-variable/team08
