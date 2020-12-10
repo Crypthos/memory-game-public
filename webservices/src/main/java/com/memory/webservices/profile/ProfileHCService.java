@@ -13,8 +13,8 @@ public class ProfileHCService {
 
     static{
         profiles.add(new Profile(++idCounter, "Team08", "Name : ", "Team08" ));
-        profiles.add(new Profile(++idCounter, "Team08", "Email", "team08@hva.nl" ));
-        profiles.add(new Profile(++idCounter, "Team08", "Password", "*****" ));
+        profiles.add(new Profile(++idCounter, "Team08", "Email : ", "team08@hva.nl" ));
+        profiles.add(new Profile(++idCounter, "Team08", "About Me : ", "Developer" ));
     }
 
     public List<Profile> findAll() {
