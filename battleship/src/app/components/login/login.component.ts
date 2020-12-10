@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   //Angular.giveMeRouter
   //Dependency Injection
   constructor(private router: Router,
-              private hcAuthenticatinServices: HcAuthenticationService) {
+              private hcAuthenticatinService: HcAuthenticationService) {
   }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     /*console.log(this.username);
     console.log(this.password);*/
     // if (this.username === 'team08' && this.password === 'dummy') {
-    if (this.hcAuthenticatinServices.authenticate(this.username, this.password)) {
+    if (this.hcAuthenticatinService.authenticate(this.username, this.password)) {
       // Redirect to game page
       this.router.navigate(['game', this.username])
       this.invalidLogin = false

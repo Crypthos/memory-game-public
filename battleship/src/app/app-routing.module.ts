@@ -11,6 +11,7 @@ import {GameComponent} from "./components/game/game.component";
 import {ErrorComponent} from "./components/error/error.component";
 import {ChatComponent} from "./components/chat/chat.component";
 import {LogoutComponent} from "./components/logout/logout.component";
+import {RouteGuardService} from "./service/route-guard.service";
 
 
 
@@ -19,12 +20,13 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'welcome', component:HomeComponent},
   {path: 'about', component:AboutComponent},
-  {path: 'intro', component: IntroComponent},
-  {path: 'chat', component: ChatComponent},
-  {path: 'game', component: GameComponent},
-  {path: 'game/:name', component: GameComponent},
+  //{path: 'intro', component: IntroComponent},
+  {path: 'game/:name', component: GameComponent, canActivate: [RouteGuardService]},
+  {path: 'game', component: GameComponent, canActivate: [RouteGuardService]},
+  {path: 'chat', component: ChatComponent, canActivate: [RouteGuardService]},
+
   {path: 'login', component: LoginComponent},
-  {path: 'logout', component: LogoutComponent},
+  {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]},
   {path: 'register', component: RegisterComponent},
  /* ,
      children: [{path: 'register', component: RegisterComponent}]},*/
