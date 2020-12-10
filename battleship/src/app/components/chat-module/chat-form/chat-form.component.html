@@ -1,0 +1,21 @@
+<div class="chat-messages">
+  <div class="chat-messages-show-container">
+    <ul class="chat-messages-show-list" id="message-list">
+    </ul>
+  </div>
+
+  <div class="chat-messages-create-container">
+    <input [(ngModel)]="message" class="chat-messages-create-input" type="text">
+    <button (click)="SendMessage()" class="send-chat-messages" type="button">Send</button>
+  </div>
+</div>
+
+
+<!--<form action="chat-inbox.component.html">
+  <div class="form-control">
+    <label [for]="username">Username</label>
+    <input id="username" name="username" placeholder="Enter username..." required="required" type="text">
+  </div>
+</form>-->
+
+

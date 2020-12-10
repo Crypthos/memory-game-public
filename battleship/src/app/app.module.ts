@@ -21,6 +21,7 @@ import { GameComponent } from './components/game/game.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { ResetGameComponent } from './components/reset-game/reset-game.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ChatFormComponent } from './components/chat-module/chat-form/chat-form.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { LogoutComponent } from './components/logout/logout.component';
@@ -41,6 +42,7 @@ import {HttpIntercepterBasicAuthService} from "./service/http/http-intercepter-b
     GameCardComponent,
     GameComponent,
     ResetGameComponent,
+    ChatFormComponent,
     ErrorComponent,
     ChatComponent,
     LogoutComponent,
