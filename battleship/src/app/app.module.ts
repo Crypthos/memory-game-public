@@ -24,6 +24,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { ErrorComponent } from './components/error/error.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { LogoutComponent } from './components/logout/logout.component';
     ErrorComponent,
     ChatComponent,
     LogoutComponent,
+    MyProfileComponent,
 
 
   ],
