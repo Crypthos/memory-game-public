@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import {HttpIntercepterBasicAuthService} from "./service/http/http-intercepter-basic-auth.service";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatToolbarModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:HttpIntercepterBasicAuthService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
