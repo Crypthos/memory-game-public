@@ -13,6 +13,7 @@ import {ChatComponent} from "./components/chat/chat.component";
 import {LogoutComponent} from "./components/logout/logout.component";
 import {RouteGuardService} from "./service/route-guard.service";
 import {MyProfileComponent} from "./components/my-profile/my-profile.component";
+import {ProfileComponent} from "./components/profile/profile.component";
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent, canActivate: [RouteGuardService]},
   {path: 'chat', component: ChatComponent, canActivate: [RouteGuardService]},
   {path: 'myprofile', component: MyProfileComponent, canActivate: [RouteGuardService]},
+  {path: 'profile/:id', component: ProfileComponent, canActivate: [RouteGuardService]},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]},
   {path: 'register', component: RegisterComponent},

@@ -44,7 +44,6 @@ export class MyProfileComponent implements OnInit {
     );
   }
 
-
   deleteProfile(id) {
     console.log(`delete profile ${id}`);
     this.profileService.deleteProfile('team08', id).subscribe(
@@ -58,6 +57,10 @@ export class MyProfileComponent implements OnInit {
 
   updateProfile(id) {
     console.log(`update ${id}`);
-    this.router.navigate(['myprofile', id]);
+    this.router.navigate(['profile', id]);
+  }
+
+  addProfile(){
+    this.router.navigate(['profile', -1]);
   }
 }

@@ -18,12 +18,21 @@ export class ProfileDataService {
   }
 
   deleteProfile(username, id) {
-    return this.http.delete(`http://localhost:8080/users/${username}/todos/${id}`);
+    return this.http.delete(`http://localhost:8080/users/${username}/profile/${id}`);
+  }
+
+  retrieveProfile(username, id) {
+    return this.http.get<Profile>(`http://localhost:8080/users/${username}/profile/${id}`);
   }
 
   updateProfile(username, id, profile) {
     return this.http.put(
-      `http://localhost:8080/users/${username}/todos/${id}`
+      `http://localhost:8080/users/${username}/profile/${id}`, profile);
+  }
+
+  createProfile(username, profile) {
+    return this.http.post(
+      `http://localhost:8080/users/${username}/profile}`
       , profile);
   }
 }

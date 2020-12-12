@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<div class="container">
+
+
+  <form (ngSubmit)="!profileForm.invalid && saveProfile()" #profileForm="ngForm">
+    <H2>Profile</H2>
+    <!--<div class="älert alert-warning" *ngIf="profileForm.dirty && profileForm.invalid">Enter valid values</div>-->
+    <div class="älert alert-warning" *ngIf="profileForm.dirty && name.invalid">Enter atleast 5 characters in profile item</div>
+
+    <fieldset class="form-group">
+      <label>Profile Item</label>
+        <input type="text" #name="ngModel" [(ngModel)] ="profile.name" class="form-control" name="name" required="required" minlength="5">
+    </fieldset>
+    <fieldset>
+      <div class="älert alert-warning" *ngIf="profileForm.dirty && description.invalid">Enter atleast 5 characters in description</div>
+      <label>Description</label>
+    <input type="text" #description="ngModel" [(ngModel)] ="profile.description"  class="form-control" name="description" required="required" minlength="5">
+    </fieldset>
+    <br>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>

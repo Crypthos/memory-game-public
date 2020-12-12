@@ -8,6 +8,10 @@ public class Profile {
     private String name;
     private String description;
 
+    protected Profile(){
+
+    }
+
     public Profile(long id, String username, String name, String description) {
         this.id = id;
         this.username = username;
